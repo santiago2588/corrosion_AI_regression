@@ -52,43 +52,43 @@ def run():
 
     if add_selectbox == 'Individual':
 
-        BPPD = st.sidebar.slider(label = 'BPPD', min_value = 0,
+        BPPD = st.slider(label = 'BPPD', min_value = 0,
                           max_value = 2000 ,
                           value = 500,step=1)
         
-        BAPD = st.sidebar.slider(label = 'BAPD', min_value = 0,
+        BAPD = st.slider(label = 'BAPD', min_value = 0,
                           max_value = 5000 ,
                           value = 1000,step=1)
                           
-        Caudal_gas = st.sidebar.slider(label = 'Caudal_gas_MSCFD', min_value = 0,
+        Caudal_gas = st.slider(label = 'Caudal_gas_MSCFD', min_value = 0,
                           max_value = 1000 ,
                           value = 100,step=1)
    
-        Presion_cabeza = st.sidebar.slider(label = 'Presion_cabeza_psi', min_value = 0,
+        Presion_cabeza = st.slider(label = 'Presion_cabeza_psi', min_value = 0,
                           max_value = 500,
                           value = 150,step=1)
 
-        Temperatura_cabeza = st.sidebar.slider(label = 'Temperatura_cabeza_F', min_value = 0,
+        Temperatura_cabeza = st.slider(label = 'Temperatura_cabeza_F', min_value = 0,
                           max_value = 300 ,
                           value = 150,step=1)
 
-        Salinidad = st.sidebar.slider(label = 'Salinidad_ppm', min_value = 0,
+        Salinidad = st.slider(label = 'Salinidad_ppm', min_value = 0,
                           max_value = 100000 ,
                           value = 50000,step=100)
 
-        CO2_gas = st.sidebar.slider(label = 'CO2_gas %', min_value = 0,
+        CO2_gas = st.slider(label = 'CO2_gas %', min_value = 0,
                           max_value = 100 ,
                           value = 20,step=1)
                           
-        Bicarbonatos = st.sidebar.slider(label = 'bicarbonatos_ppm', min_value = 0,
+        Bicarbonatos = st.slider(label = 'bicarbonatos_ppm', min_value = 0,
                           max_value = 3000,
                           value = 500,step=1)
 
-        Dosis_IC = st.sidebar.slider(label = 'dosis_IC_ppm', min_value = 0,
+        Dosis_IC = st.slider(label = 'dosis_IC_ppm', min_value = 0,
                           max_value = 300,
                           value = 100,step=1)
 
-        Fe = st.sidebar.slider(label = 'Fe_ppm', min_value = 0,
+        Fe = st.slider(label = 'Fe_ppm', min_value = 0,
                           max_value = 200,
                           value = 50,step=1)
         
