@@ -106,8 +106,17 @@ def run():
 
         if st.button('Predict'):
             prediction = predict_corrosion(model, features_df)
-            prediction='Based on your input variables, the corrosion rate is '+str('%f' % prediction) + ' mpy'
-            st.write(prediction)
+            prediction1='Based on your input variables, the corrosion rate is '+str('%f' % prediction) + ' mpy'
+            st.write(prediction1)
+            
+            if prediction < 1:
+                st.write("Corrosion risk: Low")
+            if prediction>=1 and prediction<5:
+                st.write("Corrosion risk: Moderate")
+            if prediction>=5 and prediction<10:
+                st.write("Corrosion risk: High")
+            if prediction >= 10:
+                st.write("Corrosion risk: Severe")
         
     if add_selectbox == 'Batch':
 
