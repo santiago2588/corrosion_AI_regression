@@ -112,13 +112,13 @@ def run():
         st.success('Based on your input variables, the corrosion rate is {}'.format(output1))
         
         if output < 1:
-            st.sucess("Corrosion risk: Low")
+            st.success("Corrosion risk: Low")
         if output>=1 and output<5:
-            st.sucess("Corrosion risk: Moderate")
+            st.success("Corrosion risk: Moderate")
         if output>=5 and output<10:
-            st.sucess("Corrosion risk: High")
+            st.success("Corrosion risk: High")
         if output >= 10:
-            st.sucess("Corrosion risk: Severe")
+            st.success("Corrosion risk: Severe")
         
     if add_selectbox == 'Batch':
 
