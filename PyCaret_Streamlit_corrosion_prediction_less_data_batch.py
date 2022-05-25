@@ -106,7 +106,11 @@ def run():
 
         if st.button('Predict corrosion rate'):
             output = predict_corrosion(model, features_df)
+                  
+            output=str("%.2f" % output) + ' mpy'
             
+            st.success('Based on your input variables, the corrosion rate is {}'.format(output))
+ 
             if output < 1:
                 st.success("Corrosion risk: Low")
             if output>=1 and output<5:
@@ -114,13 +118,9 @@ def run():
             if output>=5 and output<10:
                 st.success("Corrosion risk: High")
             if output >= 10:
-                st.success("Corrosion risk: Severe")
-            
-            output=str("%.2f" % output) + ' mpy'
-            
-            st.success('Based on your input variables, the corrosion rate is {}'.format(output))
- 
-              
+                st.success("Corrosion risk: Severe")         
+    
+    
     if add_selectbox == 'Batch':
 
         file_upload = st.file_uploader("Upload csv file for predictions", type=["csv"])
