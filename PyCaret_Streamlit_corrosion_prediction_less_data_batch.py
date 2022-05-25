@@ -128,12 +128,9 @@ def run():
         if file_upload is not None:
             data = pd.read_csv(file_upload)
             predictions = predict_model(estimator=model,data=data)
-                      
             st.write(predictions)
 
-
 # In[8]:
-
 
 if __name__ == '__main__':
     run()
