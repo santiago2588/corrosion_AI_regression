@@ -102,7 +102,7 @@ def run():
         
         features_df  = pd.DataFrame([features])
         
-        st.table(features_df) 
+        #st.table(features_df) 
 
         if st.button('Predict corrosion rate'):
             output = predict_corrosion(model, features_df)
