@@ -116,9 +116,9 @@ def run():
             #if output >= 10:
                 #st.success("Corrosion risk: Severe")
                     
-            output1=str("%.2f" % output) + ' mpy'
+            output=str("%.2f" % output) + ' mpy'
             
-        st.success('Based on your input variables, the corrosion rate is {}'.format(output1))
+        st.success('Based on your input variables, the corrosion rate is {}'.format(output))
         
        
         
