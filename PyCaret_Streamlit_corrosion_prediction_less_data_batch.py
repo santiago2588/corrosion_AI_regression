@@ -107,7 +107,7 @@ def run():
         if st.button('Predict corrosion rate'):
             output = predict_corrosion(model, features_df)
                     
-            output1=str(output%.2f) + ' mpy'
+            output1=str("%.2" % output) + ' mpy'
             
         st.success('Based on your input variables, the corrosion rate is {}'.format(output1))
         
