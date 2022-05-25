@@ -76,7 +76,7 @@ def run():
                           max_value = 100000 ,
                           value = 50000,step=100)
 
-        CO2_gas = st.slider(label = 'CO2_gas %', min_value = 0,
+        CO2_gas = st.slider(label = 'CO2 content in gas (%)', min_value = 0,
                           max_value = 100 ,
                           value = 20,step=1)
                           
