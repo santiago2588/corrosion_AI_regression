@@ -118,7 +118,7 @@ def run():
             
             output=str("%.2f" % output) + ' mpy'
             
-        st.success('Based on your input variables, the corrosion rate is {}'.format(output))
+            st.success('Based on your input variables, the corrosion rate is {}'.format(output))
  
               
     if add_selectbox == 'Batch':
