@@ -128,10 +128,8 @@ def run():
         if file_upload is not None:
             data = pd.read_csv(file_upload)
             predictions = predict_model(estimator=model,data=data)
-            predictions1=pd.Dataframe(predictions)
-            predictions1=predictions1.rename({'Label':'Corrosion_rate_mpy'},axis='columns',inplace=True)
-            
-            st.write(predictions1)
+                      
+            st.write(predictions)
 
 
 # In[8]:
