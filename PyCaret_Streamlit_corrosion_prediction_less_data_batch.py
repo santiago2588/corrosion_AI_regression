@@ -106,14 +106,14 @@ def run():
 
         if st.button('Predict'):
             output = predict_corrosion(model, features_df)
-            if output < 1:
-                st.write("Corrosion risk: Low")
-            if output>=1 and prediction<5:
-                st.write("Corrosion risk: Moderate")
-            if output>=5 and prediction<10:
-                st.write("Corrosion risk: High")
-            if output >= 10:
-                st.write("Corrosion risk: Severe")
+                if output < 1:
+                    st.write("Corrosion risk: Low")
+                if output>=1 and prediction<5:
+                    st.write("Corrosion risk: Moderate")
+                if output>=5 and prediction<10:
+                    st.write("Corrosion risk: High")
+                if output >= 10:
+                    st.write("Corrosion risk: Severe")
             
             output1=str('%f' % output) + ' mpy'
             
