@@ -5,9 +5,6 @@
 
 
 from pycaret.regression import load_model, predict_model
-from io import BytesIO
-from pyxlsb import open_workbook as open_xlsb
-
 
 # In[2]:
 
@@ -136,19 +133,15 @@ def run():
     
     if add_selectbox == 'Batch':
 
-        file_upload = st.file_uploader("Upload csv file for predictions", type=["xlsx"])
+        file_upload = st.file_uploader("Upload csv file for predictions", type=["csv"])
 
         if file_upload is not None:
-            data = pd.read_excel(file_upload)
+            data = pd.read_csv(file_upload)
             predictions = predict_model(estimator=model,data=data)
             predictions=predictions.rename({'Label':'Corrosion_rate_mpy'},axis='columns')
             st.write(predictions)
             
-            df_xlsx = to_excel(predictions)
-            st.download_button(label='📥 Download Current Result',
-                                data=df_xlsx ,
-                                file_name= 'df_test.xlsx')
-            
+          
 
 # In[8]:
 
