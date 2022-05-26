@@ -136,10 +136,10 @@ def run():
     
     if add_selectbox == 'Batch':
 
-        file_upload = st.file_uploader("Upload csv file for predictions", type=["csv"])
+        file_upload = st.file_uploader("Upload csv file for predictions", type=["xlsx"])
 
         if file_upload is not None:
-            data = pd.read_csv(file_upload)
+            data = pd.read_excel(file_upload)
             predictions = predict_model(estimator=model,data=data)
             predictions=predictions.rename({'Label':'Corrosion_rate_mpy'},axis='columns')
             st.write(predictions)
