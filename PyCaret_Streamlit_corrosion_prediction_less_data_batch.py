@@ -141,12 +141,12 @@ def run():
             predictions=predictions.rename({'Label':'Corrosion_rate_mpy'},axis='columns')
             st.write(predictions)
             
-        def convert_df(df):
-            return df.to_csv().encode('utf-8')
+            def convert_df(df):
+                return df.to_csv().encode('utf-8')
 
-        csv = convert_df(predictions)
+            csv = convert_df(predictions)
 
-        st.download_button("📥Press to Download",csv,"file.csv","text/csv",key='download-csv')
+            st.download_button("📥Press to Download",csv,"file.csv","text/csv",key='download-csv')
 
 # In[8]:
 
