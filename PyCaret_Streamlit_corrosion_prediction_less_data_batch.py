@@ -5,6 +5,8 @@
 
 
 from pycaret.regression import load_model, predict_model
+from io import BytesIO
+from pyxlsb import open_workbook as open_xlsb
 
 
 # In[2]:
@@ -34,6 +36,17 @@ def predict_corrosion(model, df):
     predictions=predictions_data['Label'][0]
     return predictions
 
+def to_excel(df):
+    output = BytesIO()
+    writer = pd.ExcelWriter(output, engine='xlsxwriter')
+    df.to_excel(writer, index=False, sheet_name='Sheet1')
+    workbook = writer.book
+    worksheet = writer.sheets['Sheet1']
+    format1 = workbook.add_format({'num_format': '0.00'}) 
+    worksheet.set_column('A:A', None, format1)  
+    writer.save()
+    processed_data = output.getvalue()
+    return processed_data
 
 # In[7]:
 
@@ -130,6 +143,12 @@ def run():
             predictions = predict_model(estimator=model,data=data)
             predictions=predictions.rename({'Label':'Corrosion_rate_mpy'},axis='columns')
             st.write(predictions)
+            
+            df_xlsx = to_excel(predictions)
+            st.download_button(label='📥 Download Current Result',
+                                data=df_xlsx ,
+                                file_name= 'df_test.xlsx')
+            
 
 # In[8]:
 
