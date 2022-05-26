@@ -146,7 +146,7 @@ def run():
 
         csv = convert_df(predictions)
 
-        st.download_button("Press to Download",csv,"file.csv","text/csv",key='download-csv')
+        st.download_button("📥Press to Download",csv,"file.csv","text/csv",key='download-csv')
 
 # In[8]:
 
