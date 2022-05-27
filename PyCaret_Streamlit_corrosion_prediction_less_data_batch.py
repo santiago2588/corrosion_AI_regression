@@ -56,7 +56,7 @@ def run():
     "How would you like to predict corrosion rate?",
     ("Individual", "Batch"))
     
-    st.sidebar.success('https://www.pungoapp.com')
+    st.sidebar.info('https://www.pungoapp.com')
     
     st.title("Corrosion Prediction Web App")
     st.subheader("Please adjust the value of each feature")
