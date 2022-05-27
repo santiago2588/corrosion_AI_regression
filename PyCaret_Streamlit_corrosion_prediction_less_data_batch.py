@@ -49,12 +49,12 @@ def to_excel(df):
 
 
 def run():
-       
+      
+    st.sidebar.info('This is a web app to predict corrosion rates of oil wells based on several features that you can see in the main body. Please adjust the value of each feature. After that, click on the Predict button at the bottom to see the prediction of the model.') 
+    
     add_selectbox = st.sidebar.selectbox(
     "How would you like to predict corrosion rate?",
     ("Individual", "Batch"))
-
-    st.sidebar.info('This is a web app to predict corrosion rates of oil wells based on         several features that you can see in the main body. Please adjust the         value of each feature. After that, click on the Predict button at the bottom to         see the prediction of the model.')
     
     st.sidebar.success('https://www.pungoapp.com')
     
