@@ -59,9 +59,10 @@ def run():
     st.sidebar.info('https://www.pungoapp.com')
     
     st.title("Corrosion Prediction Web App")
-    st.subheader("Please adjust the value of each feature")
-
+    
     if add_selectbox == 'Individual':
+        
+        st.subheader("Individual Prediction: Please adjust the value of each feature")
 
         BPPD = st.slider(label = 'Barrels of oil per day (BOPD)', min_value = 0,
                           max_value = 2000 ,
@@ -133,6 +134,8 @@ def run():
     
     
     if add_selectbox == 'Batch':
+        
+        st.subheader("Batch Prediction")
 
         file_upload = st.file_uploader("Upload csv file for predictions", type=["csv"])
 
