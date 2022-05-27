@@ -59,7 +59,7 @@ def run():
     st.sidebar.success('https://www.pungoapp.com')
     
     st.title("Corrosion Prediction Web App")
-    st.markdown("Please adjust the value of each feature")
+    st.subheader("Please adjust the value of each feature")
 
     if add_selectbox == 'Individual':
 
