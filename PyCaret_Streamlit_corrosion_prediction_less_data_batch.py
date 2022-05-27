@@ -49,9 +49,7 @@ def to_excel(df):
 
 
 def run():
-    
-    st.image("C:/Users/saint/Code examples/Corrosion AI/logo_pungo.png")
-    
+       
     add_selectbox = st.sidebar.selectbox(
     "How would you like to predict corrosion rate?",
     ("Individual", "Batch"))
