@@ -49,8 +49,6 @@ def to_excel(df):
 
 
 def run():
-
-    st.sidebar.info('https://www.pungoapp.com')
     
     st.title("Predicciones para 1 pozo: Por favor, ajusta el valor de cada parametro")
 
