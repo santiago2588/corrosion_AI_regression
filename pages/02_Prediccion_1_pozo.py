@@ -104,21 +104,21 @@ def run():
 
     #st.table(features_df)
 
-    if st.button('Predict corrosion rate'):
+    if st.button('Predecir velocidad de corrosion'):
         output = predict_corrosion(model, features_df)
 
         output1=str("%.2f" % output) + ' mpy'
 
-        st.success('Based on your input variables, the corrosion rate is {}'.format(output1))
+        st.success('Basado en los datos que ingresaste, la velocidad de corrosion es {}'.format(output1))
 
         if output < 1:
-            st.success("Corrosion risk: Low")
+            st.success("Riesgo de corrosion: Bajo")
         if output>=1 and output<5:
-            st.success("Corrosion risk: Moderate")
+            st.success("Riesgo de corrosion: Moderado")
         if output>=5 and output<10:
-            st.success("Corrosion risk: High")
+            st.success("Riesgo de corrosion: Alto")
         if output >= 10:
-            st.success("Corrosion risk: Severe")
+            st.success("Riesgo de corrosion: Severo")
 
 if __name__ == '__main__':
     run()
