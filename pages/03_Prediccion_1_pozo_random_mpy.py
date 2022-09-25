@@ -103,7 +103,7 @@ def run():
                 'mscf': Caudal_gas, 'pres': Presion_cabeza,
                 'temp': Temperatura_cabeza, 'Cl': Salinidad,
                 'co2_frac': CO2_gas, 'bicarb': Bicarbonatos,
-                'Fe': Fe, 'Na': Na, 'SO4':sulfatos, 'Ca':calcio}
+                'Fe': Fe, 'SO4':sulfatos}
 
     features_df  = pd.DataFrame([features])
 
