@@ -22,7 +22,7 @@ import numpy as np
 # In[4]:
 
 
-model = load_model('AI_models/corrosion_regressor_less_data')
+model = load_model('AI_models/corrosion_regressor_random_mpy')
 
 
 # In[5]:
