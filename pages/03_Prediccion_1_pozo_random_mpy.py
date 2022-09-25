@@ -61,8 +61,8 @@ def run():
                      value = 1000,step=1)
 
     BSW = st.slider(label = 'BSW %', min_value = 0,
-                    max_value = 5000 ,
-                    value = 1000,step=1)
+                    max_value = 100 ,
+                    value = 50,step=1)
 
 
     Caudal_gas = st.slider(label = 'Caudal de gas, MSCFD', min_value = 0,
