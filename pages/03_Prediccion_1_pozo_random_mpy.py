@@ -77,33 +77,25 @@ def run():
                                    max_value = 300 ,
                                    value = 150,step=1)
 
-    Salinidad = st.slider(label = 'Salinidad, ppm', min_value = 0,
-                          max_value = 100000 ,
-                          value = 50000,step=100)
-
     CO2_gas = st.slider(label = 'Fraccion CO2 gas', min_value = 0.0,
                         max_value = 1.0 ,
                         value = 0.5,step=0.1)
 
-    Bicarbonatos = st.slider(label = 'Bicarbonatos, ppm', min_value = 0,
-                             max_value = 3000,
-                             value = 500,step=1)
-
-    Fe = st.slider(label = 'Fe, ppm', min_value = 0,
-                   max_value = 200,
-                   value = 50,step=1)
-
-    Na = st.slider(label = 'Na, ppm', min_value = 0,
-                   max_value = 200,
-                   value = 50,step=1)
+    Salinidad = st.slider(label = 'Salinidad, ppm', min_value = 0,
+                          max_value = 100000 ,
+                          value = 50000,step=100)
 
     sulfatos = st.slider(label = 'Sulfatos, ppm', min_value = 0,
                          max_value = 200,
                          value = 50,step=1)
 
-    calcio = st.slider(label = 'Calcio, ppm', min_value = 0,
-                       max_value = 200,
-                       value = 50,step=1)
+    Fe = st.slider(label = 'Fe, ppm', min_value = 0,
+                   max_value = 200,
+                   value = 50,step=1)
+
+    Bicarbonatos = st.slider(label = 'Bicarbonatos, ppm', min_value = 0,
+                             max_value = 3000,
+                             value = 500,step=1)
 
     output=""
 
