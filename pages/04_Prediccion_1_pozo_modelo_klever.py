@@ -16,7 +16,7 @@ model = joblib.load('AI_models/pungo_pred.pkl')
 
 
 def predict_corrosion(model, df):
-    predictions_data = model.score(df)
+    predictions_data = model.predict(df)
     predictions=predictions_data['Label'][0]
     return predictions
 
