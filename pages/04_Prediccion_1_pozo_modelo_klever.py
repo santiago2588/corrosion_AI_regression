@@ -97,10 +97,9 @@ def run():
     features = {'bapd': BAPD, 'bppd': BPPD, 'bsw': BSW,
                 'mscf': Caudal_gas, 'pco2': Presion_parcial_CO2,
                 'temp': Temperatura_cabeza, 'Na':Sodio,'pH':pH,
-                'SO4':Sulfatos,'Cl': Salinidad,'Fe': Hierro,
-                'bicarb': Bicarbonatos, 'Press': Presion_cabeza,
-                'Ca':Calcio
-                }
+                'SO4':Sulfatos,'Fe': Hierro,
+                'bicarb': Bicarbonatos, 'Press': Presion_cabeza
+                 }
 
     features_df  = pd.DataFrame([features])
 
