@@ -9,7 +9,7 @@ import numpy as np
 # In[4]:
 
 
-model = joblib.load('C:/Users/saint/Code examples/Corrosion AI/pungo_pred_v1')
+model = joblib.load('AI_models/pungo_pred.pkl')
 
 
 # In[5]:
