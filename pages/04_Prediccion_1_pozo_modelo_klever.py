@@ -68,7 +68,7 @@ def run():
                                max_value = 500,
                                value = 150,step=1)
 
-    Sodio = st.slider(label = 'Sodio', min_value = 0.0,
+    Sodio = st.slider(label = 'Sodio', min_value = 0,
                         max_value = 50000 ,
                         value = 1000,step=1)
 
