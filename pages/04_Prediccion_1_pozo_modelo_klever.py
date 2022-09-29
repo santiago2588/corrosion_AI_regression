@@ -80,9 +80,7 @@ def run():
                          max_value = 200,
                          value = 50,step=1)
 
-    Salinidad = st.slider(label = 'Salinidad, ppm', min_value = 0,
-                         max_value = 100000,
-                         value = 50000,step=1)
+    #Salinidad = st.slider(label = 'Salinidad, ppm', min_value = 0,max_value = 100000,value = 50000,step=1)
 
     Hierro = st.slider(label = 'Fe, ppm', min_value = 0,
                    max_value = 200,
@@ -92,9 +90,7 @@ def run():
                              max_value = 3000,
                              value = 500,step=1)
 
-    Calcio = st.slider(label = 'Calcio, ppm', min_value = 0,
-                             max_value = 5000,
-                             value = 500,step=1)
+    #Calcio = st.slider(label = 'Calcio, ppm', min_value = 0,max_value = 5000,value = 500,step=1)
 
     output=""
 
