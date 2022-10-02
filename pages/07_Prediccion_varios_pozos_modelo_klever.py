@@ -48,7 +48,7 @@ def run():
     if file_upload is not None:
         data = pd.read_csv(file_upload)
         predictions = predict_corrosion(model,data)
-        predictions=predictions.rename({'Label':'Corrosion risk'},axis='columns')
+        #predictions=predictions.rename({'Label':'Corrosion risk'},axis='columns')
         st.write(predictions)
 
         def convert_df(df):
