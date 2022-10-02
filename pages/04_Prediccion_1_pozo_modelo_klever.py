@@ -9,17 +9,14 @@ import numpy as np
 # In[4]:
 
 
-model = joblib.load('AI_models/pungo_pred.pkl')
+
 
 
 # In[5]:
 
-
 def predict_corrosion(model, df):
-    predictions_data = model.predict(df)
-    #predictions=predictions_data['Label'][0]
-    predictions=predictions_data
-    return predictions
+    model = joblib.load('AI_models/pungo_pred.pkl')
+    return model.predict(df)
 
 def to_excel(df):
     output = BytesIO()
