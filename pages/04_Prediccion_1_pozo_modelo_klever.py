@@ -109,7 +109,7 @@ def run():
     if st.button('Predecir riesgo de corrosion'):
         output = predict_corrosion(model, features_df)
 
-        st.write(output)
+        st.success(output)
 
 
 if __name__ == '__main__':
