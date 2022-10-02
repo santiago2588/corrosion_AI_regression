@@ -3,12 +3,6 @@
 
 # In[1]:
 
-
-from pycaret.regression import load_model, predict_model
-
-# In[2]:
-
-
 import streamlit as st
 
 
@@ -16,22 +10,18 @@ import streamlit as st
 
 
 import pandas as pd
-import numpy as np
-
 
 # In[4]:
 
 
-model = load_model('AI_models/corrosion_regressor_random_mpy')
+model = load_model('AI_models/pungo_pred.pkl')
 
 
 # In[5]:
 
 
 def predict_corrosion(model, df):
-    predictions_data = predict_model(estimator = model, data = df)
-    predictions=predictions_data['Label'][0]
-    return predictions
+    return model.predict(df)
 
 def to_excel(df):
     output = BytesIO()
@@ -56,8 +46,8 @@ def run():
 
     if file_upload is not None:
         data = pd.read_csv(file_upload)
-        predictions = predict_model(estimator=model,data=data)
-        predictions=predictions.rename({'Label':'Corrosion_rate_mpy'},axis='columns')
+        predictions = predict_corrosion(model,data)
+        predictions=predictions.rename({'Label':'Corrosion risk'},axis='columns')
         st.write(predictions)
 
         def convert_df(df):
