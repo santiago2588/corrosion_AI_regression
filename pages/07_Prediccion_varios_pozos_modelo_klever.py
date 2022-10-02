@@ -4,6 +4,7 @@
 # In[1]:
 
 import streamlit as st
+import joblib
 
 
 # In[3]:
@@ -14,7 +15,7 @@ import pandas as pd
 # In[4]:
 
 
-model = load_model('AI_models/pungo_pred.pkl')
+model = joblib.load('AI_models/pungo_pred.pkl')
 
 
 # In[5]:
