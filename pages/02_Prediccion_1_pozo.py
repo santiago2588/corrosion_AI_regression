@@ -103,7 +103,7 @@ def run():
 
     #st.table(features_df)
 
-    if st.button('Predecir la velocidad de corrosion del pozo'):
+    if st.button('Predecir velocidad de corrosion'):
         output = predict_corrosion(model, features_df)
 
         output1=str("%.2f" % output) + ' mpy'
