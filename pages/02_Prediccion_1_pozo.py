@@ -29,7 +29,7 @@ model = load_model('AI_models/corrosion_regressor_less_data')
 
 def predict_corrosion(model, df):
     predictions_data = predict_model(estimator = model, data = df)
-    predictions=predictions_data['Label'][0]
+    predictions=predictions_data['prediction_label'][0]
     return predictions
 
 def to_excel(df):
