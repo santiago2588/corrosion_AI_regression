@@ -13,7 +13,7 @@ from PIL import Image
 image = Image.open('Resources/logo_Pungo.png')
 st.image(image)
 
-st.write("# DIGITALIZACIÓN QUE GENERA IMPACTOS")
+st.write("# DIGITALIZACIÓN QUE GENERA IMPACTO")
 st.write("### Soluciones digitales para incrementar tus ingresos, disminuir tus costos operativos, reducir riesgos en tus operaciones y mejorar tu desempeño ambiental, desarrolladas a la medida de tus necesidades.")
 
 st.success('https://www.pungoapp.com')
