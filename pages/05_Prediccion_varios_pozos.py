@@ -52,7 +52,7 @@ def run():
 
     st.title("Predicciones para varios pozos: por favor, carga el archivo CSV con los parametros de los pozos")
 
-    file_upload = st.file_uploader("Upload csv file for predictions", type=["csv"])
+    file_upload = st.file_uploader("Upload csv file for predictions", type=["csv"],key='not_random')
 
     if file_upload is not None:
         data = pd.read_csv(file_upload)
