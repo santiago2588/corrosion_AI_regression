@@ -57,7 +57,7 @@ def run():
     if file_upload is not None:
         data = pd.read_csv(file_upload)
         predictions = predict_model(estimator=model,data=data)
-        predictions=predictions.rename({'Label':'Corrosion_rate_mpy'},axis='columns')
+        predictions=predictions.rename({'prediction_label':'Corrosion_rate_mpy'},axis='columns')
         st.write(predictions)
 
         def convert_df(df):
