@@ -22,7 +22,7 @@ import numpy as np
 # In[4]:
 
 
-model = load_model('AI_models/corrosion_regressor_random_mpy')
+model = load_model('AI_models/corrosion_regression_repsol')
 
 
 # In[5]:
@@ -30,7 +30,7 @@ model = load_model('AI_models/corrosion_regressor_random_mpy')
 
 def predict_corrosion(model, df):
     predictions_data = predict_model(estimator = model, data = df)
-    predictions=predictions_data['Label'][0]
+    predictions=predictions_data['prediction_label'][0]
     return predictions
 
 def to_excel(df):
@@ -50,7 +50,7 @@ def to_excel(df):
 
 def run():
 
-    st.title("Predicciones para varios pozos: por favor, carga el archivo CSV con los parametros de los pozos")
+    st.title("Predicciones para varios pozos con el dataset de Repsol: por favor, carga el archivo CSV con los parametros de los pozos")
 
     file_upload = st.file_uploader("Upload csv file for predictions", type=["csv"],key='random')
 
